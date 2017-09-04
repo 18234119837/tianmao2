@@ -147,7 +147,6 @@ img{
     margin-top:6px;
     /*background:greenyellow;*/
     display: flex;
-
 }
 input{
     outline: none;
@@ -158,7 +157,6 @@ input{
     margin-left: 128px;
     border:2px solid #ff0036;
     border-right:0;
-
 }
 .so-right .so-shang2{
     width:130px;
@@ -337,9 +335,9 @@ input{
 /*视频开始*/
 .video{
     width:1200px;
-    height:434px;
+    height:432px;
     margin:60px auto 30px;
-    background:white;
+    /*background: #a7ff56;*/
     display: flex;
 }
 .video-left{
@@ -369,7 +367,6 @@ input{
 #first{
    z-index: 2;
 }
-
 .video-left-top .item-shipin{
     position:absolute;
     left:0;
@@ -379,7 +376,6 @@ input{
     width:488px;
     height:275px;
 }
-
 /*视频左面的中间部分*/
 .video-left-centerbox{
     width:488px;
@@ -411,11 +407,6 @@ input{
     bottom: 0;
     margin: auto;
 }
-
-
-
-
-
 .video-left-center {
     width:984px;
     /*原来宽度是100%--------6个图片的宽度和(160+4)*6*/
@@ -467,9 +458,6 @@ input{
         transform: scale(1);
     }
 }
-
-
-
 /*视频左面的下面开始*/
 .video-left-bottom{
     width: 100%;
@@ -502,27 +490,40 @@ input{
     line-height: 20px;
 }
 /*视频左面的下面结束*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*视频的右面开始*/
 .video-right{
-    width:704px;
-    height:436px;
+    width:707px;
+    height:432px;
     background: #fff9fb;
-    margin-left: 8px;
+    background: yellow;
+    margin-left: 5px;
 }
-.video-right1{
-    width:100%;
+.video-right1,.video-right2{
+    width:707px;
     height:108px;
     background:white;
     display: flex;
 }
-.video-right2{
-    width:100%;
-    height:108px;
-    background:white;
-    display: flex;
-}
- .item{
-    width:117px;
+.video-right1 .item{
+    width:118px;
     height:108px;
     padding:28px 8px;
     position: relative;
@@ -530,7 +531,19 @@ input{
     border-right:1px solid  #F5F5F5;
     border-bottom: 1px solid #F5F5F5;
 }
-#video-last{
+.video-right2 .item {
+    width: 118px;
+    height: 108px;
+    padding: 28px 8px;
+    position: relative;
+    float: left;
+    border-right: 1px solid #F5F5F5;
+    border-bottom: 0;
+}
+
+
+
+.item.video-last{
     border-right: 0;
 }
 .item .mask{
@@ -544,6 +557,19 @@ input{
     transition: all 1s;
 }
 /*视频结束*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -646,11 +672,11 @@ input{
     height: 219px;
     padding:19px;
 }
-.fashion-icon{
+.fashion-top .fashion-icon{
     font-weight: 700;
     color: white;
-    font-size: 24px;
-    margin: 0 4px;
+    font-size: 20px;
+    margin: 0  4px 0;
 }
 /*潮流前沿结束*/
 /*长图1开始*/
