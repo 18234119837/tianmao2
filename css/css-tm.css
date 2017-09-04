@@ -333,11 +333,6 @@ input{
 .banner-icon{
     padding:0 6px 0 ;
 }
-
-
-
-
-
 /*轮播图结束*/
 /*视频开始*/
 .video{
@@ -371,7 +366,6 @@ input{
     /*animation:scale 2s;*/
     /*display: block;*/
 }
-
 #first{
    z-index: 2;
 }
@@ -530,7 +524,7 @@ input{
  .item{
     width:117px;
     height:108px;
-    padding:11px 8px;
+    padding:28px 8px;
     position: relative;
     float: left;
     border-right:1px solid  #F5F5F5;
