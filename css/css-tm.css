@@ -2,7 +2,6 @@ body,ul,p{
     margin:0;
     padding:0;
     list-style: none;
-/*background: rgba(172, 172, 172, 0.17);*/
 }
 *{
     box-sizing: border-box;
@@ -19,6 +18,15 @@ img{
 .big-box{
     background:#F5F5F5 ;
 }
+/*右侧导航开始*/
+.right-nav{
+    width: 35px;
+    height: 100%;
+    background: black;
+    position: fixed;
+    right: 0;
+}
+/*右侧导航结束*/
 /*顶部开始*/
 .top{
     width:100%;
@@ -838,11 +846,6 @@ input{
     position: absolute;
     right: 1PX;
     bottom:1PX;
-    /*background: greenyellow;*/
-}
-.goods-right-pc:hover{
-    transform: translateX(-10px) ;
-    transition: all 1s;
 }
 .goods-right-pc img{
     width: 100%;
@@ -1174,7 +1177,6 @@ h2{
     padding-left: 70px;
     margin:0 auto;
     display: flex;
-
 }
 .serve-item{
     width:210px;
@@ -1182,7 +1184,7 @@ h2{
     padding-left: 52px;
     /*background:blue;*/
 }
-span{
+.serve-item span{
     color: #646464;
     font-weight: 700;
     font-size: 16px;
@@ -1223,18 +1225,14 @@ span{
     width: 1200px;
     height:auto;
     font-size: 12px;
-    /*line-height: 25px;*/
-    /*display: flex;*/
 }
 .tm-item1 li{
     padding:5px 0;
-    height: 30px;
+    height: 26px;
     margin-right: 3px;
     line-height: 28px;
     color: #fff;
 }
-
-
 .last{
     width:1200px;
     height:30px;
@@ -1249,4 +1247,24 @@ span{
     width: 80px;
     height: 30px;
 }
+.tm-bottom-txt1{
+    margin-bottom: 8px;
+}
+.tm-item1 .tm-bottom-txt2{
+    color: #a4a4a4;
+}
+.tm-item1 .tm-bottom-txt2 span{
+    color: #a4a4a4;
+    margin: 0 70px;
+    font-size: 12px;
+}
+.tm-item1 .tm-bottom-txt3{
+    color: #686868;
+    font-weight: 400;
+    margin-bottom: 6px;
+}
+
+
+
+
 /*底部结束*/
