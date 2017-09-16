@@ -476,7 +476,7 @@ input{
 .video-left-bottoml{
     width: 80px;
     height: 40px;
-    background:orchid;
+    /*background:orchid;*/
 }
 .video-left-bottomr{
     width: 400px;
@@ -539,6 +539,18 @@ input{
     border-right:1px solid  #F5F5F5;
     border-bottom: 1px solid #F5F5F5;
 }
+.item:hover .mask{
+    /*opacity:1;*/
+display: block;
+
+}
+
+
+
+
+
+
+
 .video-right2 .item {
     width: 118px;
     height: 108px;
@@ -548,9 +560,6 @@ input{
     border-right: 1px solid #F5F5F5;
     border-bottom: 0;
 }
-
-
-
 .item.video-last{
     border-right: 0;
 }
@@ -561,7 +570,8 @@ input{
     position: absolute;
     left:0;
     top:0px;
-    opacity:0;
+    /*opacity:0;*/
+    display: none;
     transition: all 1s;
 }
 /*视频结束*/
