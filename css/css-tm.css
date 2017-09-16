@@ -501,21 +501,6 @@ input{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*视频的右面开始*/
 .video-right{
     width:707px;
@@ -540,16 +525,8 @@ input{
     border-bottom: 1px solid #F5F5F5;
 }
 .item:hover .mask{
-    /*opacity:1;*/
-display: block;
-
+    display: block;
 }
-
-
-
-
-
-
 
 .video-right2 .item {
     width: 118px;
@@ -575,21 +552,6 @@ display: block;
     transition: all 1s;
 }
 /*视频结束*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -829,6 +791,10 @@ display: block;
     height: 220px;
     position:relative;
 }
+.goods-item:hover .goods-right-pc img{
+    transform: translateX(-3px);
+}
+
 .goods-right-text1{
     position: absolute;
     top: 25px;
@@ -1120,8 +1086,15 @@ h2{
     height:326px;
     background:#fff;
 }
+.like-box{
+    box-sizing: border-box;
+}
+.like-box .like-item:hover {
+    border: 1px solid red;
+    /*background: red;*/
+}
 .like-pc{
-    width: 235px;
+    width: 233px;
     height: 235px;
     background:orange;
 }
