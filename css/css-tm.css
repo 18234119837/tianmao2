@@ -18,6 +18,152 @@ img{
 .big-box{
     background:#F5F5F5 ;
 }
+/*顶部监听效果开始*/
+.topbar-box {
+    width: 100%;
+    height: 50px;
+    background: #FF0036;
+    transition: top 1s;
+    position: fixed;
+    left: 0;
+    top: -50px;
+    z-index: 9999;
+}
+.topbar {
+    width: 1200px;
+    height: 50px;
+    margin: 0 auto;
+}
+.topbar-img {
+    width: 126px;
+    height: 32px;
+    margin: 9px 122px 9px 0;
+    float: left;
+}
+.topbar [type=text] {
+    width: 648px;
+    height: 30px;
+    float: left;
+    margin-top: 12px;
+    padding: 0 6px;
+}
+.topbar [type=button] {
+    width: 90px;
+    height: 30px;
+    background: #FF0036;
+    margin-top: 12px;
+    border: 1px solid #ff0036;
+    font-size: 16px;
+    color: #ffffff;
+}
+input::-webkit-input-placeholder {
+    color: rgb(102, 102, 102);
+    font-size: 12px;
+}
+/*顶部监听效果结束*/
+/*左侧楼层开始*/
+
+.leftbar-box {
+    width: 0px;
+    height: 0px;
+    z-index: 9999;
+    position: fixed;
+    left: 50%; /*left:calc(50%-530px);*/
+    bottom: 60px;
+    margin-left: -640px;
+    transition: all 1s;
+    overflow: hidden;
+    padding: 0;
+    font-size: 12px;
+    color: white;
+}
+.leftbar-box > div {
+    width: 36px;
+    height: 36px;
+    border: 1px solid white;
+    border-top: none;
+    background: red;
+    line-height: 36px;
+    text-align: center;
+    cursor: pointer;
+}
+.leftbar-box div.totop{
+    background: #ABABAB;
+}
+.leftbar {
+    width: 36px;
+    height: 252px;
+    padding: 0;
+}
+.leftbar li {
+    width: 36px;
+    height: 36px;
+    background: #626262;
+    line-height: 36px;
+    text-align: center;
+    border: 1px solid white;
+    border-top: none;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 36px;
+    cursor: pointer;
+    padding: 3px 0;
+}
+.leftbar li span {
+    display: block;
+    width: 100%;
+    height: 14px;
+    line-height: 14px;
+}
+.leftbar li:nth-child(1):hover {
+    background: yellowgreen;
+}
+.leftbar li:nth-child(1).active {
+    background: yellowgreen;
+}
+.leftbar li:nth-child(2):hover {
+    background: orange;
+}
+.leftbar li:nth-child(2).active {
+    background: orange;
+}
+.leftbar li:nth-child(3):hover {
+    background: #73ff37;
+}
+.leftbar li:nth-child(3).active {
+    background: #73ff37;
+}
+.leftbar li:nth-child(4):hover {
+    background: #4CB6FD;
+}
+.leftbar li:nth-child(4).active {
+    background: #4CB6FD;
+}
+.leftbar li:nth-child(5):hover {
+    background: #cbfa0a;
+}
+.leftbar li:nth-child(5).active {
+    background: #cbfa0a;
+}
+.leftbar li:nth-child(6):hover {
+    background: red;
+}
+.leftbar li:nth-child(6).active {
+    background: red;
+}
+.leftbar li:nth-child(7):hover {
+    background: pink;
+}
+.leftbar li:nth-child(7).active {
+    background: pink;
+}
+.leftbar li:nth-child(8):hover {
+    background: plum;
+}
+.leftbar li:nth-child(8).active {
+    background: plum;
+}
+/*左侧楼层结束*/
 /*右侧导航开始*/
 .right-nav{
     width: 35px;
@@ -37,15 +183,12 @@ img{
 .top-box{
     width:1200px;
     height:100%;
-    /*background:palegoldenrod;*/
     margin:0 auto;
     display:flex;
 }
 .top-leftbox{
     width:300px;
     height:100%;
-    /*background: #18ddd0;*/
-
 }
 .top-leftbox ul{
     width:300px;
@@ -70,7 +213,6 @@ img{
 .top-rightbox{
     width:900px;
     height:100%;
-    /*background:pink ;*/
 }
 .top-rightbox ul{
     width:900px;
@@ -130,7 +272,6 @@ img{
     width:1200px;
     height: 100px;
     margin:30px auto 0;
-    /*background: orange;*/
     display: flex;
 }
 .so-left{
@@ -142,18 +283,15 @@ img{
 .so-right{
     width:754px;
     height:100%;
-    /*background: pink;*/
 }
 .so-right-box{
     width:754px;
     heiht:64px;
-    /*background: plum;*/
 }
 .so-right-boxshang{
     width:754px;
     height:40px;
     margin-top:6px;
-    /*background:greenyellow;*/
     display: flex;
 }
 input{
@@ -179,7 +317,6 @@ input{
     width:754px;
     height:14px;
     margin-top:6px;
-    /*background:yellow;*/
 }
 .so-right-boxxia ul{
     width:754px;
@@ -248,7 +385,6 @@ input{
     font-weight: 700;
     padding:0 4px 0;
 }
-
 .red-mao{
     position:absolute;
     top:-11px;
@@ -265,20 +401,22 @@ input{
     font-size: 16px;
     color:#fff;
 }
-
 /*商品分类结束*/
 /*轮播图开始*/
 .banner{
     width:100%;
     height:500px;
-    background: #F8D171;
     transition: all 1s;
 }
+.big-active{
+    background: #FCDB64;
+}
+
+
 .banner-box{
     width:1200px;
     height:500px;
     margin:0 auto;
-    /*background:yellow;*/
     position:relative;
 }
 .banner-pcbox{
@@ -291,13 +429,18 @@ input{
     position:absolute;
     top:0;
     left:0;
-    transition: all 1s;
+    transition: all 2s;
     opacity: 0;
 }
 .banner-pcbox .active{
     z-index: 1;
     opacity: 1;
 }
+
+
+
+
+
 .dian-box{
     width:200px;
     height:20px;
@@ -310,19 +453,21 @@ input{
     z-index:999;
 }
 .dian-box li{
-    width:20px;
-    height:20px;
-    border-radius:50%;
+    width:25px;
+    height:5px;
     background:rgba(0,0,0,0.4);
     cursor: pointer;
 }
 .dian-box .active{
     background:white;
 }
+.dian-box li:hover{
+    background:white;
+}
 .banner-nav{
     width:190px;
     height:500px;
-    background:rgba(238,238,238,0.8) ;
+    background:rgba(0,0,0,0.5) ;
     position: absolute;
     left: 0;
     top:0;
@@ -333,7 +478,7 @@ input{
     height:500px;
     font-size: 14px;
     line-height: 31px;
-    color:black;
+    color:white;
     margin-left: 10px;
 }
 .banner-icon{
@@ -481,13 +626,11 @@ input{
 .video-left-bottomr{
     width: 400px;
     height:40px;
-    /*background: yellow;*/
     overflow: hidden;
 }
 .bottomr-inner{
     width: 400px;
     height: 80px;
-    /*background: blue;*/
     transition: all 1s;
 }
 .bottomr-inner li{
@@ -506,7 +649,6 @@ input{
     width:707px;
     height:432px;
     background: #fff9fb;
-    background: yellow;
     margin-left: 5px;
 }
 .video-right1,.video-right2{
@@ -547,7 +689,6 @@ input{
     position: absolute;
     left:0;
     top:0px;
-    /*opacity:0;*/
     display: none;
     transition: all 1s;
 }
@@ -674,7 +815,6 @@ input{
 .goods{
     width:1200px;
     height:19px;
-    /*background: yellow;*/
     margin:0 auto 6px;
 }
 .goods-left{
@@ -685,7 +825,6 @@ input{
 .goods-left ul{
     width:280px;
     height:100%;
-    /*display: flex;*/
 }
 .goods-left ul .goods-text1{
     font-size: 18px;
@@ -704,7 +843,6 @@ input{
     width:588px;
     height:100%;
     float: right;
-    /*background: palegoldenrod;*/
 }
 .goods-right ul{
     width:588px;
@@ -722,7 +860,6 @@ input{
 .goods-box{
     width:1200px;
     height:440px;
-    /*background: pink;*/
     margin:0 auto;
     display: flex;
 }
@@ -794,7 +931,6 @@ input{
 .goods-item:hover .goods-right-pc img{
     transform: translateX(-3px);
 }
-
 .goods-right-text1{
     position: absolute;
     top: 25px;
@@ -822,10 +958,12 @@ input{
     position: absolute;
     right: 1PX;
     bottom:1PX;
+    transition: all 1s;
 }
 .goods-right-pc img{
     width: 100%;
     height: 100%;
+    transition: all 0.5s;
 }
 .goods-boxright ul:nth-child(2) li{
     width:245px;
@@ -841,10 +979,13 @@ input{
 .goods-ringtline{
     border-right: 0;
 }
-
 /*美丽人生的主体结束*/
+/*居家生活开始*/
+#addmargin-top{
+    margin-top:30px;
+}
+/*居家生活结束*/
 /*潮电酷玩题目开始*/
-
 .play{
     width:1200px;
     height:19px;
@@ -903,12 +1044,10 @@ input{
 .play-boxleft{
     width:246px;
     heiht:100%;
-    background:plum;
 }
 .play-boxleft .play-boxleft-top{
     width:246px;
     height:330px;
-    background: yellow;
     position: relative;
 }
 .play-boxleft .play-boxleft-top img {
@@ -1006,13 +1145,11 @@ li.changkuang{
 .play-boxright2 {
     width: 238px;
     height:440px;
-    /*background: yellow;*/
 }
 .play-boxright2 ul {
     width: 238px;
     height:146px;
     background: white;
-    /*margin-bottom: 1px;*/
     position: relative;
     border-bottom:1px solid #F5F5F5;
 }
@@ -1022,16 +1159,11 @@ li.changkuang{
 .play-mallpc{
     width: 100px;
     height: 100px;
-    background:darkgray;
     position:absolute;
     bottom:0;
     right:0;
 }
 /*潮电酷玩主体结束*/
-
-
-
-
 /*猜你喜欢开始*/
 .like{
     width:1200px;
@@ -1075,11 +1207,10 @@ h2{
     width:1200px;
     height:326px;
     /*background: pink;*/
-    margin:0 auto;
+    margin:0 auto 7px;
     display: flex;
     padding-bottom:4px;
     justify-content: space-between;
-    margin-bottom:7px;
 }
 .like-item{
     width:235px;
@@ -1096,7 +1227,6 @@ h2{
 .like-pc{
     width: 233px;
     height: 235px;
-    background:orange;
 }
 .like-text1{
     width: 207px;
