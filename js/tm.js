@@ -46,6 +46,7 @@
 {
     let btns = document.querySelectorAll('.leftbar li');
     let contents = document.querySelectorAll('.content');
+    console.log(contents)
     let obj = document.body.scrollTop === 0 ?
         document.documentElement.scrollTop : document.body;
     btns.forEach(function (ele, index) {
@@ -143,4 +144,107 @@
         stop = setInterval(fn, 2000);
     }
 }
+//----------------------视频左面---------------
+//    视频的左侧开始
+{
+    var items_big = document.querySelectorAll(".video-left-top .item-shipin");
+    var items_small = document.querySelectorAll(".video-left-center .item-shipin");
+    var masks_ = document.querySelectorAll(".video-center-mask");
+    var mao_ = document.querySelectorAll(".item-shipin .bofangmao");
+    var mao = document.querySelector(".bofangmao1");
+    var bigbox = document.querySelector(".video-left-top");
+    bigbox.onmouseover = function () {
+        mao.style.animation = "scale 1s";
+    }
+    bigbox.onmouseout = function () {
+        mao.style.animation = "";
+    }
+    items_small.forEach(function (ele, index) {
+        ele.onmouseover = function () {
+            items_big.forEach(function (ele, index) {
+                ele.style.display = "none"
+                masks_[index].style.display = "none";
+                mao_[index].style.display = "none";
+
+            })
+            items_big[index].style.display = "block";
+            masks_[index].style.display = "block";
+            mao_[index].style.display = "block";
+        }
+    })
+    //    左右箭头移动图片效果
+    const videoleftcenter = document.querySelector(".video-left-center");
+    const prev = document.querySelector(".prev");
+    const next = document.querySelector(".next");
+    next.onclick = function () {
+        prev.style.display = "block";
+        next.style.display = "none";
+        videoleftcenter.style.transition = "all 1s"
+        videoleftcenter.style.marginLeft = -492 + "px";
+    }
+    prev.onclick = function () {
+        next.style.display = "block";
+        prev.style.display = "none";
+        videoleftcenter.style.transition = "all 1s"
+        videoleftcenter.style.marginLeft = 0 + "px";
+    }
+    //视频的左面的下面开始
+    {
+        const bottomr_inner= document.querySelector(".bottomr-inner");
+        let num=0;
+        setInterval(function () {
+            num++;
+            if(num==2){
+                num=0;
+            }
+            bottomr_inner.style.marginTop=-num*40+"px";
+        },2000)
+    }
+    //视频的左面的下面结束
+}
+
+//----------------------------------右侧导航
+
+let tmyzi = document.querySelectorAll(".tmrightzi");
+let tmyxain = document.querySelectorAll(".tmrightxain");
+tmyzi.forEach(function (a, b) {
+    a.onmouseover = function () {
+        tmyxain[b].classList.add("active7");
+        animate(tmyxain[b],{right:35,opacity:1},300);
+    }
+    a.onmouseout=function () {
+        animate(tmyxain[b],{right:65,opacity:0},300,function () {
+            tmyxain[b].classList.remove("active7");
+        })
+    }
+})
+//-----------banner上左侧导航开始---------------
+{
+    let banner_list=document.querySelector('.banner-nav');
+    let banner_navh=document.querySelector('.banner-navh');
+    let banner_box=document.querySelector('.banner');
+    
+    
+    
+    banner_list.onmouseover=function(){
+        banner_navh.style.display='block';
+    }
+    banner_list.onmouseout=function(e){
+        e.stopPropagation();
+    }
+    banner_box.onmouseleave=function(){
+        banner_navh.style.display='none';
+    }
+    banner_navh.onmouseout=function(){
+        banner_navh.style.display='none';
+    }
+
+}
+//-----------banner上左侧导航结束---------------
+
+
+
+
+
+
 
